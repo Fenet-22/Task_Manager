@@ -1,0 +1,107 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgba(39, 39, 39, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Container for the edit form */
+.edit-container {
+    background-color: rgba(116, 116, 116, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-form {
+    text-align: center;
+}
+
+.edit-form h2 {
+    font-size: 30px;
+    color: rgba(255, 228, 0, 0.8);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: rgba(255, 101, 47, 0.8);
+}
+
+/* Save button */
+.btn-save {
+    width: 100%;
+    padding: 14px;
+    background-color: rgba(20, 167, 108, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: rgba(20, 167, 108, 0.8);
+}
+
+/* Error message */
+.error {
+    color: rgba(255, 101, 47, 0.8);
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Back link */
+.back-link {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.back-link a {
+    color: rgba(255, 228, 0, 0.8);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}

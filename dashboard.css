@@ -1,0 +1,268 @@
+/* General reset and font style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgba(39, 39, 39, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    height: 100vh;
+    font-size: 16px;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar style */
+.sidebar {
+    width: 250px;
+    background-color: rgba(116, 116, 116, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar-header h2 {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    padding: 8px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(255, 101, 47, 0.5);
+}
+
+/* Main content area */
+.main-content {
+    flex-grow: 1;
+    padding: 40px 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: rgba(255, 228, 0, 0.8);
+    font-weight: 700;
+}
+
+.logout-btn {
+    background-color: rgba(255, 101, 47, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 101, 47, 0.8);
+}
+
+/* Add Task Form */
+.task-form {
+    background-color: rgba(116, 116, 116, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.task-form input,
+.task-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+.task-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(20, 167, 108, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-form button:hover {
+    background-color: rgba(20, 167, 108, 0.8);
+}
+
+/* Tasks section */
+.tasks h2 {
+    font-size: 28px;
+    color: rgba(255, 228, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+.task-card {
+    background-color: rgba(116, 116, 116, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-info {
+    font-size: 18px;
+    color: white;
+}
+
+.status {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.status.completed {
+    background-color: rgba(20, 167, 108, 0.5);
+    color: white;
+}
+
+.status.pending {
+    background-color: rgba(255, 228, 0, 0.5);
+    color: white;
+}
+
+.task-actions a {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-complete {
+    background-color: rgba(20, 167, 108, 0.5);
+    color: white;
+}
+
+.btn-edit {
+    background-color: rgba(255, 228, 0, 0.5);
+    color:black;
+    margin-left: 10px;
+}
+
+.btn-delete {
+    background-color: rgba(255, 101, 47, 0.5);
+    color: white;
+    margin-left: 10px;
+}
+
+.btn-complete:hover {
+    background-color: rgba(20, 167, 108, 0.8);
+}
+
+.btn-edit:hover {
+    background-color: rgba(255, 228, 0, 0.8);
+}
+
+.btn-delete:hover {
+    background-color: rgba(255, 101, 47, 0.8);
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+/* Popup text color only */
+/* Popup overlay */
+#deletePopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* semi-transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup content box */
+#deletePopup .popup-content {
+    background-color: #fff; /* white background */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Popup text */
+#deletePopup .popup-content p {
+    color: black; /* make text black */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Popup buttons */
+#deletePopup .popup-content button {
+    background-color: #ff652f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#deletePopup .popup-content button:hover {
+    background-color: #e64a2b;
+}
+

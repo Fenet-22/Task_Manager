@@ -1,0 +1,109 @@
+/* General reset and font styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: rgba(39, 39, 39, 0.8); /* Dark transparent */
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+}
+
+/* Form container styling */
+.form-container {
+    background-color: rgba(116, 116, 116, 0.5); /* Semi-transparent gray */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Heading style */
+.form-container h2 {
+    font-size: 30px;
+    color: rgba(255, 228, 0, 0.8); /* Soft yellow */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input fields and text area styles */
+input[type="text"], textarea, select, input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light transparent border */
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus, input[type="date"]:focus {
+    border-color: rgba(20, 167, 108, 0.8); /* Green on focus */
+}
+
+/* Placeholder text style */
+input[type="text"]::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Textarea specific styles */
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Label styles */
+label {
+    display: block;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Button styling */
+button {
+    background-color: rgba(20, 167, 108, 0.5); /* Transparent green */
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: rgba(20, 167, 108, 0.8); /* Darker green on hover */
+}
+
+button:active {
+    background-color: rgba(20, 167, 108, 0.9);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 24px;
+    }
+}
